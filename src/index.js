@@ -51,16 +51,13 @@ function test(c) {
 
 function test_2(par) {
     let color = "blue";
-    let size = 4;
     let i = 1;
     let array = [1, 2, 3];
-
-    for (let j = 0; j < array.length; j++) {
-        i = i * array[j];
-    }
+    array.array.forEach(elem => {
+        i = i * array[elem];
+    });
 
     let param = par + 1;
-
     switch (param) {
         case 0:
             console.log("doSomething");
