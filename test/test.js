@@ -1,10 +1,13 @@
 const { expect } = require("chai");
-const { sumar, resta, multiplicar, dividir, add } = require("../src/index");
+const { sumar, resta, multiplicar, dividir, add, raiz, elevadoal2 } = require("../src/index");
 
 describe("Calculadora", function () {
     
     it("debería sumar dos números correctamente", function () {
         expect(sumar(5, 3)).to.equal(8);
+    });
+    it("debería sumar dos strings", function () {
+        expect(sumar("a","b")).to.NaN;
     });
 
     it("debería restar dos números correctamente", function () {
@@ -36,6 +39,18 @@ describe("Calculadora", function () {
     });
 
     it("debería manejar números negativos en la suma", function () {
-        expect(add("-1,2,3,-4,5")).to.equal(5);
+        expect(add("-1,2,3,-4,5")).to.equal(10);
+    });
+
+    it("debería calcular la raíz cuadrada de la diferencia entre dos números", function () {
+        expect(raiz(9, 4)).to.equal(2.23606797749979);
+        expect(raiz(16, 9)).to.equal(2.6457513110645907);
+        expect(raiz(25, 0)).to.equal(5);
+    });
+
+    it("debería elevar el resultado de la resta al cuadrado", function () {
+        expect(elevadoal2(5, 3)).to.equal(4);
+        expect(elevadoal2(10, 3)).to.equal(49);
+        expect(elevadoal2(2, 5)).to.equal(9);
     });
 });
