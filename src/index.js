@@ -45,41 +45,47 @@ function add(numbers) {
     return result;
 }
 
-function test() {
-    let a = "start";
-    let b;
+function test(c) {
+    let a = c || "start";
+    let b = "";
     for (let i = 0; i < 5; i++) {
         b += a[i].toUpperCase();
     }
+    return b;
 }
 
-function test_2() {
+function test_2(par) {
     let color = "blue";
     let size = 4;
-    i = 1;
+    let i = 1;
     let array = [1, 2, 3];
 
     for (let j = 0; j < array.length; j++) {
         i = i * array[j];
     }
 
-    let param = 1;
+    let param = par + 1;
 
     switch (param) {
         case 0:
             console.log("doSomething");
+            color = i + "doSomething";
             break;
         default:
-            error();
+            console.log("error")
+            color = i + "error";
             break;
         case 1:
             console.log("doSomethingElse");
+            color = i + "doSomethingElse";
             break;
     }
+
+    return color;
 }
 
 function getIP() {
-    let ip = process.env.IP_ADDRESS;
+    let ip = process.env.IP_ADDRESS || "local";
     let j = 0;
     while (true) {
         j++;
@@ -114,6 +120,7 @@ function test_4() {
 
     mySet.add(1);
     mySet.add(1);
+    return [myMap, mySet, fruits];
 }
 
 module.exports = { sumar, resta, multiplicar, dividir, add, test, test_2, foo, test_3, getIP, test_4, raiz, elevadoal2};
