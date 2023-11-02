@@ -18,8 +18,9 @@ describe("Calculadora", function () {
         expect(dividir(10, 2)).to.equal(5);
     });
 
+    
     it("debería lanzar un error al dividir por cero", function () {
         expect(() => dividir(5, 0)).to.throw("Division by zero"); // Code Smell: No se manejan errores correctamente
     });
-    
+
 });
