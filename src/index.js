@@ -29,10 +29,10 @@ function dividir(a, b) {
 }
 
 function add(numbers) {
-    var result = 0;
-    var parts = numbers.split(',');
-    for (var i = 0; i < parts.length; i++) {
-        var integer = parseInt(parts[i]);
+    let result = 0;
+    let parts = numbers.split(',');
+    for (let i = 0; i < parts.length; i++) {
+        let integer = parseInt(parts[i]);
         if (!isNaN(integer)) {
             if (integer >= 0) {
                 if (integer <= 1000) {
@@ -54,16 +54,16 @@ function test() {
 }
 
 function test_2() {
-    var color = "blue";
-    var size = 4;
+    let color = "blue";
+    let size = 4;
     i = 1;
     let array = [1, 2, 3];
 
-    for (j = 0; j < array.length; j++) {
+    for (let j = 0; j < array.length; j++) {
         i = i * array[j];
     }
 
-    param = 1;
+    let param = 1;
 
     switch (param) {
         case 0:
@@ -79,7 +79,7 @@ function test_2() {
 }
 
 function getIP() {
-    var ip = "192.168.12.42";
+    let ip = process.env.IP_ADDRESS;
     let j = 0;
     while (true) {
         j++;
