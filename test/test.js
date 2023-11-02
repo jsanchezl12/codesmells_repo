@@ -81,11 +81,15 @@ describe("Calculadora", function () {
 
 describe("Función test_2", function () {
     it("debería retornar '6doSomething' para par = -1", function () {
-        expect(test_2(-1)).to.equal("6doSomething");
+        expect(test_2(-1)).to.equal("doSomething");
     });
 
     it("debería retornar '6error' para par = -2", function () {
         expect(test_2(-2)).to.equal("6error");
+    });
+
+    it("debería retornar '6error' para par = 0", function () {
+        expect(test_2(0)).to.equal("doSomethingElse");
     });
 
     it("debería retornar '1error' para otros valores de par", function () {
