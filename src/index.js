@@ -83,6 +83,9 @@ function getIP() {
     let j = 0;
     while (true) {
         j++;
+        if (j < 5) {
+            break;
+        }
     }
     return ip;
 }
