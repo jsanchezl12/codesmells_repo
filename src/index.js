@@ -78,10 +78,38 @@ function test_2() {
     }
 }
 
+function getIP() {
+    var ip = "192.168.12.42";
+    let j = 0;
+    while (true) {
+        j++;
+    }
+    return ip;
+}
+
 function foo(param) {
     if (param && param.value) {
         bar(param.value);
     }
 }
 
-module.exports = { sumar, resta, multiplicar, dividir, add, test, test_2, foo};
+function test_3() {
+    const pattern1 = /\x1a/;
+    const pattern2 = new RegExp('\x1a');
+}
+
+function test_4() {
+    const myMap = new Map();
+    const mySet = new Set();
+    const fruits = ["apple", "banana", "cherry"];
+    fruits[1] = "banana";
+    fruits[1] = "apple";
+
+    myMap.set("key", 1);
+    myMap.set("key", 2);
+
+    mySet.add(1);
+    mySet.add(1);
+}
+
+module.exports = { sumar, resta, multiplicar, dividir, add, test, test_2, foo, test_3, getIP, test_4};
