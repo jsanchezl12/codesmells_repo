@@ -9,12 +9,12 @@ function resta(a, b) {
     return a - b;
 }
 
-function resta1(a, b) {
-    return a - b;
+function raiz(a, b) {
+    return Math.sqrt(Math.abs(a - b));
 }
 
-function resta2(a, b) {
-    return a - b;
+function elevadoal2(a, b) {
+    return Math.pow(a - b, 2);
 }
 
 function multiplicar(a, b) {
@@ -23,7 +23,7 @@ function multiplicar(a, b) {
 
 function dividir(a, b) {
     if (b === 0) {
-        return NaN;
+        throw new Error("Division by zero");
     }
     return a / b;
 }
@@ -116,4 +116,4 @@ function test_4() {
     mySet.add(1);
 }
 
-module.exports = { sumar, resta, multiplicar, dividir, add, test, test_2, foo, test_3, getIP, test_4};
+module.exports = { sumar, resta, multiplicar, dividir, add, test, test_2, foo, test_3, getIP, test_4, raiz, elevadoal2};
