@@ -63,13 +63,13 @@ function test_2(par) {
             console.log("doSomething");
             color = i + "doSomething";
             break;
-        default:
-            console.log("error")
-            color = i + "error";
-            break;
         case 1:
             console.log("doSomethingElse");
             color = i + "doSomethingElse";
+            break;
+        default:
+            console.log("error")
+            color = i + "error";
             break;
     }
 
@@ -104,13 +104,8 @@ function test_4() {
     const myMap = new Map();
     const mySet = new Set();
     const fruits = ["apple", "banana", "cherry"];
-    fruits[1] = "banana";
     fruits[1] = "apple";
-
-    myMap.set("key", 1);
     myMap.set("key", 2);
-
-    mySet.add(1);
     mySet.add(1);
     return [myMap, mySet, fruits];
 }
