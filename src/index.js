@@ -9,6 +9,14 @@ function resta(a, b) {
     return a - b;
 }
 
+function resta1(a, b) {
+    return a - b;
+}
+
+function resta2(a, b) {
+    return a - b;
+}
+
 function multiplicar(a, b) {
     return a * b;
 }
