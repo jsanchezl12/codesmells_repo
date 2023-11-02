@@ -31,7 +31,7 @@ function dividir(a, b) {
 function add(numbers) {
     let result = 0;
     let parts = numbers.split(',');
-    parts.array.forEach(elem => {
+    parts.forEach(elem => {
         let integer = parseInt(parts[elem]);
         if ((!isNaN(integer)) && (integer >= 0) && (integer <= 1000)) {
             result += integer;
@@ -52,7 +52,7 @@ function test(c) {
 function test_2(par) {
     let i = 1;
     let array = [1, 2, 3];
-    array.array.forEach(elem => {
+    array.forEach(elem => {
         i = i * array[elem];
     });
 
