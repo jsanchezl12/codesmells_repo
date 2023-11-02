@@ -31,17 +31,12 @@ function dividir(a, b) {
 function add(numbers) {
     let result = 0;
     let parts = numbers.split(',');
-    for (let i = 0; i < parts.length; i++) {
-        let integer = parseInt(parts[i]);
-        if (!isNaN(integer)) {
-            if (integer >= 0) {
-                if (integer <= 1000) {
-                    result += integer;
-                }
-            }
+    parts.array.forEach(elem => {
+        let integer = parseInt(parts[elem]);
+        if ((!isNaN(integer)) && (integer >= 0) && (integer <= 1000)) {
+            result += integer;
         }
-    }
-
+    });
     return result;
 }
 
@@ -122,5 +117,6 @@ function test_4() {
     mySet.add(1);
     return [myMap, mySet, fruits];
 }
+
 
 module.exports = { sumar, resta, multiplicar, dividir, add, test, test_2, foo, test_3, getIP, test_4, raiz, elevadoal2};
