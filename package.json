@@ -1,0 +1,20 @@
+{
+  "name": "codesmells_repo",
+  "version": "1.0.0",
+  "description": "Repo with codesmells",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha",
+    "test:cov": "npx nyc report --reporter=html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  },
+  "devDependencies": {
+    "nyc": "^15.1.0"
+  }
+}
