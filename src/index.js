@@ -50,7 +50,6 @@ function test(c) {
 }
 
 function test_2(par) {
-    let color = "blue";
     let i = 1;
     let array = [1, 2, 3];
     array.array.forEach(elem => {
@@ -89,7 +88,7 @@ function getIP() {
 }
 
 function foo(param) {
-    if (param && param.value) {
+    if (param?.value) {
         bar(param.value);
     }
 }
