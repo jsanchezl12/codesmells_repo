@@ -97,8 +97,9 @@ function foo(param) {
 }
 
 function test_3() {
-    const pattern1 = /\x1a/;
-    const pattern2 = new RegExp('\x1a');
+    const pattern1 = /\x20/;
+    const pattern2 = new RegExp('\x20');
+    return [pattern1, pattern2];
 }
 
 function test_4() {
