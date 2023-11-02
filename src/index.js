@@ -1,5 +1,8 @@
 function sumar(a, b) {
-    return a + b; // Bug: falta una validación para comprobar si a y b son números
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        return NaN;
+    }
+    return a + b;
 }
 
 function resta(a, b) {
@@ -11,7 +14,10 @@ function multiplicar(a, b) {
 }
 
 function dividir(a, b) {
-    return a / b; // Code Smell: no se manejan errores de división por cero
+    if (b === 0) {
+        return NaN;
+    }
+    return a / b;
 }
 
 module.exports = { sumar, resta, multiplicar, dividir };
