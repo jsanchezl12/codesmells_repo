@@ -1,6 +1,7 @@
 const { expect } = require("chai");
 const { sumar, resta, multiplicar, dividir, add, raiz, elevadoal2, test, test_2, getIP, test_3} = require("../src/index");
 
+
 describe("Calculadora", function () {
     
     it("debería sumar dos números correctamente", function () {
@@ -80,12 +81,12 @@ describe("Calculadora", function () {
 });
 
 describe("Función test_2", function () {
-    it("debería retornar '6doSomething' para par = -1", function () {
+    it("debería retornar 'doSomething' para par = -1", function () {
         expect(test_2(-1)).to.equal("doSomething");
     });
 
     it("debería retornar '6error' para par = -2", function () {
-        expect(test_2(-2)).to.equal("6error");
+        expect(test_2(-2)).to.equal("error");
     });
 
     it("debería retornar '6error' para par = 0", function () {
@@ -93,7 +94,7 @@ describe("Función test_2", function () {
     });
 
     it("debería retornar '1error' para otros valores de par", function () {
-        expect(test_2(2)).to.equal("6error");
+        expect(test_2(2)).to.equal("error");
     });
 });
 
